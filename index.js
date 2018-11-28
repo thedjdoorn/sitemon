@@ -46,7 +46,7 @@ if(process.argv[2] === null || !( timeout = parseInt(process.argv[3]) )){
 
                 console.log(mismatch);
                 console.log(msgtreshold);
-                if (mismatch >= msgtreshold) {
+                if (mismatch > msgtreshold) {
                     original = screenshot; //rewrite the original, else the message will repeat every time
                     notifier.notify(
                         {
